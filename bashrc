@@ -17,7 +17,7 @@ export PROMPT_COMMAND="history -a"
 [[ -s "$HOME/.git-completion.sh" ]] && source "$HOME/.git-completion.sh"
 
 # Load RVM into a shell session
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -66,8 +66,8 @@ function parse_git_branch {
 export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\n\[$(tput bold)\]\[$(tput setaf 1)\]\$(~/.rvm/bin/rvm-prompt) \[$(tput sgr0)\]> "
+  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\[$(tput bold)\]\[$(tput setaf 1)\]\ \[$(tput sgr0)\]> "
 else
-  PS1="\u@\H \w \$(parse_git_branch)\n\$(~/.rvm/bin/rvm-prompt) > "
+  PS1="\u@\H \w \$(parse_git_branch) > "
 fi
 unset color_prompt
