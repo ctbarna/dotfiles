@@ -1,6 +1,7 @@
 export INPUTRC="~/.inputrc"
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH:~/bin"
 export EDITOR=`which vim`
+export PYTHONPATH="Library/Frameworks/Mapnik.framework/Python:$PYTHONPATH"
 # Whenever displaying the prompt, write the previous line to disk.
 export PROMPT_COMMAND="history -a"
 

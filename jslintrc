@@ -1,2 +1,2 @@
-/*jslint browser: true, sloppy: false, maxerr: 50, indent: 4 */
+/*jslint browser: true, sloppy: false, maxerr: 50, indent: 2 */
 /*global $, barchart */
