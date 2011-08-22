@@ -20,6 +20,9 @@ export PROMPT_COMMAND="history -a"
 # Load RVM into a shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Secret files (for private information)
+[[ -s "$HOME/.bash_secret" ]] && source "$HOME/.bash_secret"
+
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 # Ignore same sucessive entries.
