@@ -12,3 +12,23 @@ set winheight=999
 
 set pvh=15
 au BufEnter ?* if &pvw | let &l:wh=&pvh | endif
+
+function NerdTreeEnter()
+  if exists("t:NERDTreeBufName")
+    if expand("<afile>") == t:NERDTreeBufName
+      set columns=115
+      NERDTree
+    endif
+  endif
+endfunction
+
+function NerdTreeExit()
+  if exists("t:NERDTreeBufName")
+    if expand("<afile>") == t:NERDTreeBufName
+      set columns=84
+    endif
+  endif
+endfunction
+
+autocmd BufWinEnter * :call NerdTreeEnter()
+autocmd BufWinLeave * :call NerdTreeExit()
