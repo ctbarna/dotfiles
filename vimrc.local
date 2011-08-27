@@ -12,16 +12,3 @@ set winheight=999
 
 set pvh=15
 au BufEnter ?* if &pvw | let &l:wh=&pvh | endif
-
-" Overriding shit.
-function ChangeDirectory(dir, ...)
-  execute "cd " . fnameescape(a:dir)
-  let stay = exists("a:1") ? a:1 : 1
-
-  " NERDTree
-
-  if !stay
-    wincmd p
-  endif
-endfunction
-
