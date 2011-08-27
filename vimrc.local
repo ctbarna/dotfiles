@@ -9,3 +9,6 @@ set winwidth=84
 set winheight=5
 set winminheight=5
 set winheight=999
+
+set pvh=15
+au BufEnter ?* if &pvw | let &l:wh=&pvh | endif
