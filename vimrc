@@ -17,9 +17,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
-set cindent
-set smartindent
-set autoindent
+filetype plugin indent on
 
 " Searching
 set hlsearch
@@ -39,9 +37,6 @@ let mapleader="."
 
 set statusline=%{fugitive#statusline()}
 set wildignore+=*.png
-set columns=84
-set lines=55
-set guifont=Menlo:h16
 
 " Directories for swp files.
 set backupdir=~/.vim/backup
@@ -53,25 +48,22 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
-set pvh=15
-" au BufEnter ?* if &pvw | let &l:wh=&pvh | endif
+" function NerdTreeEnter()
+  " if exists("t:NERDTreeBufName")
+    " if expand("<afile>") == t:NERDTreeBufName
+      " set columns=115
+      " NERDTree
+    " endif
+  " endif
+" endfunction
 
-function NerdTreeEnter()
-  if exists("t:NERDTreeBufName")
-    if expand("<afile>") == t:NERDTreeBufName
-      set columns=115
-      NERDTree
-    endif
-  endif
-endfunction
+" function NerdTreeExit()
+  " if exists("t:NERDTreeBufName")
+    " if expand("<afile>") == t:NERDTreeBufName
+      " set columns=84
+    " endif
+  " endif
+" endfunction
 
-function NerdTreeExit()
-  if exists("t:NERDTreeBufName")
-    if expand("<afile>") == t:NERDTreeBufName
-      set columns=84
-    endif
-  endif
-endfunction
-
-autocmd BufWinEnter * :call NerdTreeEnter()
-autocmd BufWinLeave * :call NerdTreeExit()
+" autocmd BufWinEnter * :call NerdTreeEnter()
+" autocmd BufWinLeave * :call NerdTreeExit()
