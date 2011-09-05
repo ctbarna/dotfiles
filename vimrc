@@ -9,8 +9,6 @@ syntax on
 set encoding=utf-8
 
 colorscheme solarized
-set transparency=10
-set guioptions-=T
 
 " Whitespace stuff
 set nowrap
@@ -19,6 +17,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+set cindent
+set smartindent
+set autoindent
 
 " Searching
 set hlsearch
