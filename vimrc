@@ -4,6 +4,7 @@ set nocompatible
 set number
 set ruler
 syntax on
+set visualbell
 
 " Set encoding
 set encoding=utf-8
@@ -27,7 +28,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc
 
 " Status bar
 set laststatus=2
