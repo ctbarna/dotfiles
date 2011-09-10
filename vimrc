@@ -79,4 +79,7 @@ au BufRead,BufNewFile *.txt call s:setupWrapping()
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " refresh CommandT
-autocmd FocusGained * call CommandTFlush
+autocmd FocusGained * CommandTFlush
+
+" Fix delimitMate nesting quotes for Python.
+au FileType python let b:delimitMate_nesting_quotes = ['"']
