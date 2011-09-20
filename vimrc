@@ -83,3 +83,10 @@ autocmd FocusGained * CommandTFlush
 
 " Fix delimitMate nesting quotes for Python.
 au FileType python let b:delimitMate_nesting_quotes = ['"']
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
