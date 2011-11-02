@@ -97,3 +97,6 @@ au BufNewFile,BufRead *.less set filetype=less
 " TeX stuff.
 au FileType tex let b:delimitMate_quotes = "\" ' $"
 au FileType tex setlocal textwidth=79
+
+" Open HTML files.
+au FileType html map <Leader>r :!open %<CR>
