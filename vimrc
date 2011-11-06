@@ -10,6 +10,7 @@ set visualbell
 set encoding=utf-8
 
 colorscheme solarized
+set background=dark
 
 " Whitespace stuff
 set nowrap
