@@ -95,6 +95,9 @@ vmap <C-Down> ]egv
 " Less syntax.
 au BufNewFile,BufRead *.less set filetype=less
 
+" Taskpaper
+au BufNewFile,BufRead todo.txt set filetype=taskpaper
+
 " TeX stuff.
 au FileType tex let b:delimitMate_quotes = "\" ' $"
 au FileType tex setlocal textwidth=79
