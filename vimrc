@@ -18,6 +18,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set autoindent
 set list listchars=tab:\ \ ,trail:·
 filetype plugin indent on
 
