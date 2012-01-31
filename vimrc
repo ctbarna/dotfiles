@@ -36,7 +36,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc
 set laststatus=2
 
 " Leader
-let mapleader="."
+let mapleader=";"
 
 set statusline=%{fugitive#statusline()}
 set wildignore+=*.png
@@ -105,3 +105,8 @@ au FileType tex setlocal textwidth=79
 
 " Open HTML files.
 au FileType html map <Leader>r :!open %<CR>
+
+" Trying out relative line numbers.
+set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
