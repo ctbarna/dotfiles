@@ -110,3 +110,6 @@ au FileType html map <Leader>r :!open %<CR>
 set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+" Set EJS files to HTML
+au BufRead,BufNewFile *.ejs setfiletype html
