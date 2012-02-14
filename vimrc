@@ -13,6 +13,7 @@ colorscheme solarized
 set background=dark
 
 " Whitespace stuff
+set tw=79
 set nowrap
 set tabstop=2
 set shiftwidth=2
