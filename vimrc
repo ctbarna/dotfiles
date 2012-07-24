@@ -87,6 +87,10 @@ autocmd FocusGained * CommandTFlush
 " Fix delimitMate nesting quotes for Python.
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 
+" delimitMate expand CR
+let g:SuperTabCrMapping=0
+let delimitMate_expand_cr = 1
+
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
