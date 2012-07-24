@@ -118,3 +118,6 @@ autocmd InsertLeave * :set relativenumber
 
 " Set EJS files to HTML
 au BufRead,BufNewFile *.ejs setfiletype html
+
+" Powerline stuff!
+let g:Powerline_symbols = 'fancy'
