@@ -2,6 +2,9 @@ export INPUTRC="~/.inputrc"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/mongo/bin:/usr/local/get-shit-done:$PATH:~/bin"
 export EDITOR=`which vim`
 export PYTHONPATH="Library/Frameworks/Mapnik.framework/Python:$PYTHONPATH"
+# Set term!
+export TERM=xterm-256color
+
 # Whenever displaying the prompt, write the previous line to disk.
 export PROMPT_COMMAND="history -a"
 
@@ -18,7 +21,10 @@ export PROMPT_COMMAND="history -a"
 [[ -s "$HOME/.git-completion.sh" ]] && source "$HOME/.git-completion.sh"
 
 # Load RVM into a shell session
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# rbenv shim and autocomplete.
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Secret files (for private information)
 [[ -s "$HOME/.bash_secret" ]] && source "$HOME/.bash_secret"
