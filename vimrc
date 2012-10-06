@@ -40,7 +40,7 @@ set laststatus=2
 let mapleader=";"
 
 set statusline=%{fugitive#statusline()}
-set wildignore+=*.png
+set wildignore+=*.png,env/**
 
 " Directories for swp files.
 set backupdir=~/.vim/backup
@@ -121,3 +121,4 @@ au BufRead,BufNewFile *.ejs setfiletype html
 
 " Powerline stuff!
 let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme = 'default'
