@@ -1,5 +1,5 @@
 " gvim color options.
-set transparency=10
+" set transparency=10
 set guioptions-=T
 set columns=84
 set lines=55
