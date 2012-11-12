@@ -3,7 +3,7 @@
 set guioptions-=T
 set columns=84
 set lines=55
-set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Inconsolata-dz\ for\ Powerline:h12
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen

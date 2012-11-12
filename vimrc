@@ -1,10 +1,24 @@
-call pathogen#infect()
 set nocompatible
 
 set number
 set ruler
 syntax on
 set visualbell
+
+" Vundle
+" filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"""
+" Bundles
+"""
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-surround'
+Bundle 'Raimondi/delimitMate'
 
 " Set encoding
 set encoding=utf-8
