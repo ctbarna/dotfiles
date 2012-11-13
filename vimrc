@@ -15,10 +15,11 @@ call vundle#rc()
 """
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-powerline'
 
 " Set encoding
 set encoding=utf-8
@@ -96,7 +97,7 @@ au BufRead,BufNewFile *.txt call s:setupWrapping()
 au FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " refresh CommandT
-autocmd FocusGained * CommandTFlush
+" autocmd FocusGained * CommandTFlush
 
 " Fix delimitMate nesting quotes for Python.
 au FileType python let b:delimitMate_nesting_quotes = ['"']
