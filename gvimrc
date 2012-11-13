@@ -1,7 +1,7 @@
 " gvim color options.
 " set transparency=10
 set guioptions-=T
-set columns=84
+set columns=100
 set lines=55
 set guifont=Inconsolata-dz\ for\ Powerline:h12
 
