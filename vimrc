@@ -20,6 +20,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-markdown'
 
 " Set encoding
 set encoding=utf-8
@@ -87,6 +88,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 
 " md, markdown, and mk are markdown and define buffer-local preview
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupWrapping()
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set ft=markdown
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
