@@ -1,5 +1,5 @@
 export INPUTRC="~/.inputrc"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/mongo/bin:/usr/local/get-shit-done:$PATH:~/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/mongo/bin:/usr/local/get-shit-done:$PATH:~/bin"
 export EDITOR=`which vim`
 export PYTHONPATH="Library/Frameworks/Mapnik.framework/Python:$PYTHONPATH"
 # Set term!
