@@ -30,5 +30,6 @@
 [core]
   quotepath = false
   excludesfile = /Users/chris/.gitignore_global
+  editor = mvim -f
 [push]
   default = tracking
