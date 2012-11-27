@@ -142,3 +142,16 @@ au BufRead,BufNewFile *.ejs setfiletype html
 " Powerline stuff!
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_theme = 'default'
+
+" NerdTree
+map <Leader>n :NERDTreeToggle<CR>
+
+" Insert Timestamp
+nnoremap <Leader>d diw"=strftime("%s")<CR>P
+
+" Remove trailing whitespace
+nnoremap <Leader>w :retab<CR>:%s/\s\+$//eg<CR>
+
+" Bind refs and fixes for git commits.
+au FileType gitcommit map <Leader>r i<CR>refs #<Esc>"+p
+au FileType gitcommit map <Leader>f i<CR>fixes #<Esc>"+p
