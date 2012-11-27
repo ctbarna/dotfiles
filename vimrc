@@ -21,6 +21,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-markdown'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'ervandew/supertab'
 
 " Set encoding
 set encoding=utf-8
