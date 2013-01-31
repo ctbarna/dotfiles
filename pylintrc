@@ -1,0 +1,7 @@
+[MESSAGES CONTROL]
+
+disable=C0111,W0212
+
+
+[REPORTS]
+output-format=colorized
