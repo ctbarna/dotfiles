@@ -70,14 +70,14 @@ function parse_git_dirty {
   echo "$(parse_git_added)$(parse_git_modified)$(parse_git_deleted)"
 }
 function parse_git_branch {
-  echo "$(parse_git_dirty)$(__git_ps1 '%s')"
+  echo "$(parse_git_dirty)$(__git_ps1 '%s ')"
 }
 
 export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\w\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\[$(tput bold)\]\[$(tput setaf 1)\] \[$(tput sgr0)\]> "
+  PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\H \[$(tput setaf 4)\]\W\[$(tput setaf 3)\] \$(parse_git_branch)\[$(tput sgr0)\]\[$(tput bold)\]\[$(tput setaf 1)\]\[$(tput sgr0)\]> "
 else
-  PS1="\u@\H \w \$(parse_git_branch) > "
+  PS1="\u@\H \W \$(parse_git_branch) > "
 fi
 unset color_prompt
