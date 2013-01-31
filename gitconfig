@@ -27,9 +27,17 @@
   df = diff --word-diff
   lg = log -p
   l1 = log --oneline --decorate
+  store = !sh -c 'git tag archive/$0 $0 && git branch -d $0'
+  viz = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+  clog = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
-  quotepath = false
-  excludesfile = /Users/chris/.gitignore_global
+	quotepath = false
+	excludesfile = /Users/cbarna/.gitignore_global
   editor = mvim -f
+	autocrlf = input
 [push]
   default = tracking
+[web]
+	browser = chrome-canary
+[browser "chrome-canary"]
+	cmd = open -a 'Google Chrome Canary.app'

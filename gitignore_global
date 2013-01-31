@@ -36,3 +36,7 @@ Thumbs.db
 # Cloud config files #
 ######################
 .epio*
+
+# Tags file #
+#############
+tags
