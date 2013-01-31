@@ -24,6 +24,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
 
 " Set encoding
 set encoding=utf-8
