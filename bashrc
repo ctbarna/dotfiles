@@ -1,9 +1,13 @@
 export INPUTRC="~/.inputrc"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/mongo/bin:/usr/local/get-shit-done:$PATH:~/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/mongo/bin:/usr/local/get-shit-done:/usr/local/share/npm/bin/:$PATH:~/bin"
 export EDITOR=`which vim`
 export PYTHONPATH="Library/Frameworks/Mapnik.framework/Python:$PYTHONPATH"
+
 # Set term!
 export TERM=xterm-256color
+
+# Ignore tagfiles with grep
+export GREP_OPTIONS='--exclude=tags'
 
 # Whenever displaying the prompt, write the previous line to disk.
 export PROMPT_COMMAND="history -a"
