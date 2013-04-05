@@ -5,6 +5,7 @@ set columns=130
 set colorcolumn=81
 set lines=55
 set guifont=Inconsolata-dz\ for\ Powerline:h12
+highlight SignColumn guibg=#586e75
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen
