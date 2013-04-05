@@ -25,6 +25,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+Bundle 'mattn/gist-vim'
 
 " Set encoding
 set encoding=utf-8
@@ -151,8 +152,21 @@ map <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>d diw"=strftime("%s")<CR>P
 
 " Remove trailing whitespace
-nnoremap <Leader>w :retab<CR>:%s/\s\+$//eg<CR>
+nnoremap <Leader>w :retab<CR>:%s/\s\+$//eg<CR>:nohl<CR>
 
 " Bind refs and fixes for git commits.
 au FileType gitcommit map <Leader>r i<CR>refs #<Esc>"+p
 au FileType gitcommit map <Leader>f i<CR>fixes #<Esc>"+p
+
+" Syntastic Settings
+let g:syntastic_check_on_open=1
+
+" Quick switching between syntax types.
+map <Leader>sp :set filetype=php<CR>
+map <Leader>sh :set filetype=html<CR>
+map <Leader>sc :set filetype=css<CR>
+map <Leader>sj :set filetype=javascript<CR>
+
+" Switch between tabs and spaces
+map <Leader>ts :set expandtab
+map <Leader>tt :set noexpandtab
