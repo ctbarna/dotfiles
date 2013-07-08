@@ -58,7 +58,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc
 set laststatus=2
 
 " Leader
-let mapleader=";"
+let mapleader=","
 
 set statusline=%{fugitive#statusline()}
 set wildignore+=*.png,env/**
