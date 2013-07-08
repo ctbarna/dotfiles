@@ -135,7 +135,7 @@ au FileType html map <Leader>r :!open %<CR>
 
 " Trying out relative line numbers.
 set relativenumber
-autocmd InsertEnter * :set number
+autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
 " Set EJS files to HTML
