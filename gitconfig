@@ -30,6 +30,7 @@
     store = !sh -c 'git tag archive/$0 $0 && git branch -d $0'
     viz = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
     clog = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    rollback = !sh -c 'git log --format=%B -n 1 HEAD|pbcopy && git reset --soft HEAD~'
 [core]
     quotepath = false
     excludesfile = /Users/cbarna/.gitignore_global
