@@ -46,3 +46,4 @@ tags
 ##########
 .Python
 *.egg-info/
+.py[co]
