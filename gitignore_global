@@ -40,3 +40,9 @@ Thumbs.db
 # Tags file #
 #############
 tags
+.tags*
+
+# Python #
+##########
+.Python
+*.egg-info/
