@@ -18,7 +18,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
-Bundle 'Raimondi/delimitMate'
+"Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/nerdtree'
@@ -26,6 +26,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/gist-vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'kana/vim-smartinput'
 
 " Set encoding
 set encoding=utf-8
@@ -107,11 +109,11 @@ au FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 " autocmd FocusGained * CommandTFlush
 
 " Fix delimitMate nesting quotes for Python.
-au FileType python let b:delimitMate_nesting_quotes = ['"']
+"au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 " delimitMate expand CR
-let g:SuperTabCrMapping=0
-let delimitMate_expand_cr = 1
+"let g:SuperTabCrMapping=0
+"let delimitMate_expand_cr = 1
 
 " Bubble single lines
 nmap <C-Up> [e
@@ -168,5 +170,21 @@ map <Leader>sc :set filetype=css<CR>
 map <Leader>sj :set filetype=javascript<CR>
 
 " Switch between tabs and spaces
-map <Leader>ts :set expandtab
-map <Leader>tt :set noexpandtab
+map <Leader>ts :set expandtab<CR>
+map <Leader>tt :set noexpandtab<CR>
+
+" Switch textwidths.
+map <Leader>ww :set tw=
+map <Leader>wi :set tw=0<CR>
+map <Leader>w8 :set tw=79<CR>
+
+" Clear a search
+map <Leader>x :nohl<CR>
+
+" Insert a space in normal mode.
+nmap <space> i <esc>
+
+" Fugitive Bindings
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gb :Gblame<CR>
