@@ -28,6 +28,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mattn/gist-vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'kana/vim-smartinput'
+Bundle 'groenewege/vim-less'
 
 " Set encoding
 set encoding=utf-8

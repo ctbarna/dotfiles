@@ -1,7 +1,8 @@
 export INPUTRC="~/.inputrc"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin/:/usr/local/Cellar/php53/5.3.18/bin:$PATH:~/bin"
-export EDITOR=`which vim`
-export PYTHONPATH="Library/Frameworks/Mapnik.framework/Python:$PYTHONPATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin/:/usr/local/Cellar/php53/5.3.25/bin:$PATH:~/bin"
+export EDITOR="`which mvim` -f"
+#export EDITOR="atom -w"
+export PYTHONPATH="$PYTHONPATH"
 
 # Set term!
 export TERM=xterm-256color

@@ -34,11 +34,13 @@
 [core]
     quotepath = false
     excludesfile = /Users/cbarna/.gitignore_global
+	autocrlf = input
     editor = mvim -f
-    autocrlf = input
 [push]
     default = tracking
 [web]
-    browser = chrome-canary
+    browser = chrome-stable
 [browser "chrome-canary"]
     cmd = open -a 'Google Chrome Canary.app'
+[browser "chrome-stable"]
+    cmd = open -a 'Google Chrome.app'
