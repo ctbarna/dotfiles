@@ -1,5 +1,5 @@
 export INPUTRC="~/.inputrc"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin/:/usr/local/Cellar/php53/5.3.25/bin:$PATH:~/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/php53/5.3.25/bin:$PATH:~/bin"
 export EDITOR="`which mvim` -f"
 #export EDITOR="atom -w"
 export PYTHONPATH="$PYTHONPATH"
@@ -24,6 +24,7 @@ export PROMPT_COMMAND="history -a"
 
 # Git completion
 [[ -s "$HOME/.git-completion.sh" ]] && source "$HOME/.git-completion.sh"
+[[ -s "$HOME/.git-prompt.sh" ]] && source "$HOME/.git-prompt.sh"
 
 # Load RVM into a shell session
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -86,3 +87,5 @@ else
   PS1="\u@\H \W \$(parse_git_branch) > "
 fi
 unset color_prompt
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -49,3 +49,7 @@ tags
 *.egg-info/
 *.egg/
 .py[co]
+
+# Sass #
+########
+.sass-cache/
