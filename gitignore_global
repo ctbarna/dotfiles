@@ -53,3 +53,9 @@ tags
 # Sass #
 ########
 .sass-cache/
+
+# Node #
+########
+node_modules/
+
+post-checkout

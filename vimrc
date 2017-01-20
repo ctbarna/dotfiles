@@ -7,28 +7,30 @@ set visualbell
 
 " Vundle
 " filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 """
 " Bundles
 """
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
-"Bundle 'Raimondi/delimitMate'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-markdown'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'mattn/gist-vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'kana/vim-smartinput'
-Bundle 'groenewege/vim-less'
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'scrooloose/syntastic'
+Plugin 'kana/vim-smartinput'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'craigemery/vim-autotag'
+Plugin 'sheerun/vim-polyglot'
+
+call vundle#end()
 
 " Set encoding
 set encoding=utf-8
@@ -57,6 +59,9 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc
 
+" Make CtrlP only search files in git
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 " Status bar
 set laststatus=2
 
@@ -83,16 +88,8 @@ function s:setupWrapping()
   set textwidth=72
 endfunction
 
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
-endfunction
-
 " make uses real tabs
 au FileType make set noexpandtab
-
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " md, markdown, and mk are markdown and define buffer-local preview
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupWrapping()
@@ -106,15 +103,8 @@ au BufRead,BufNewFile *.txt call s:setupWrapping()
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
-" refresh CommandT
-" autocmd FocusGained * CommandTFlush
-
-" Fix delimitMate nesting quotes for Python.
-"au FileType python let b:delimitMate_nesting_quotes = ['"']
-
-" delimitMate expand CR
-"let g:SuperTabCrMapping=0
-"let delimitMate_expand_cr = 1
+" Autocomplete/highlight dashes in SCSS
+autocmd FileType scss set iskeyword+=-
 
 " Bubble single lines
 nmap <C-Up> [e
@@ -122,16 +112,6 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
-
-" Less syntax.
-au BufNewFile,BufRead *.less set filetype=less
-
-" Taskpaper
-au BufNewFile,BufRead todo.txt set filetype=taskpaper
-
-" TeX stuff.
-au FileType tex let b:delimitMate_quotes = "\" ' $"
-au FileType tex setlocal textwidth=79
 
 " Open HTML files.
 au FileType html map <Leader>r :!open %<CR>
@@ -141,51 +121,18 @@ set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-" Set EJS files to HTML
-au BufRead,BufNewFile *.ejs setfiletype html
-
 " Powerline stuff!
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_theme = 'default'
 
-" NerdTree
-map <Leader>n :NERDTreeToggle<CR>
-
-" Insert Timestamp
-nnoremap <Leader>d diw"=strftime("%s")<CR>P
-
 " Remove trailing whitespace
 nnoremap <Leader>w :retab<CR>:%s/\s\+$//eg<CR>:nohl<CR>
 
-" Bind refs and fixes for git commits.
-au FileType gitcommit map <Leader>r i<CR>refs #<Esc>"+p
-au FileType gitcommit map <Leader>f i<CR>fixes #<Esc>"+p
-
 " Syntastic Settings
 let g:syntastic_check_on_open=1
-
-" Quick switching between syntax types.
-map <Leader>sp :set filetype=php<CR>
-map <Leader>sh :set filetype=html<CR>
-map <Leader>sc :set filetype=css<CR>
-map <Leader>sj :set filetype=javascript<CR>
-
-" Switch between tabs and spaces
-map <Leader>ts :set expandtab<CR>
-map <Leader>tt :set noexpandtab<CR>
-
-" Switch textwidths.
-map <Leader>ww :set tw=
-map <Leader>wi :set tw=0<CR>
-map <Leader>w8 :set tw=79<CR>
 
 " Clear a search
 map <Leader>x :nohl<CR>
 
 " Insert a space in normal mode.
 nmap <space> i <esc>
-
-" Fugitive Bindings
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gc :Gcommit<CR>
-nmap <Leader>gb :Gblame<CR>
