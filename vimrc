@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible
 
 set number
@@ -6,9 +7,10 @@ syntax on
 set visualbell
 
 " Vundle
-" filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 """
 " Bundles
@@ -31,6 +33,7 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
+filetype plugin indent on    " required
 
 " Set encoding
 set encoding=utf-8
@@ -130,6 +133,8 @@ nnoremap <Leader>w :retab<CR>:%s/\s\+$//eg<CR>:nohl<CR>
 
 " Syntastic Settings
 let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_scss_checkers = ['stylelint']
 
 " Clear a search
 map <Leader>x :nohl<CR>
