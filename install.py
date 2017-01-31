@@ -7,6 +7,8 @@ for file in os.listdir(cwd):
     if not file.endswith(".symlink"):
         continue
 
+    # I don't love how this can just replace all `.symlink`s but I'm broadly
+    # controlling the inputs so it's good enough for now.
     new_filename = ".%s" % (file.replace(".symlink", ""))
 
     abs_path = os.path.join(cwd, file)
