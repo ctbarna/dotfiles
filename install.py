@@ -4,15 +4,18 @@ cwd = os.path.dirname(os.path.abspath(__file__))
 home = os.path.expanduser("~")
 
 def symlink(abs_path, symlink_path):
-    print "Symlinking: %s to %s" % (symlink_path, abs_path)
 
-    if os.path.islink(symlink_path) and os.path.realpath(symlink_path) != abs_path:
-        print "Removing broken symlink %s" % symlink_path
-        os.remove(symlink_path)
+    if os.path.islink(symlink_path):
+        if os.path.realpath(symlink_path) != abs_path:
+            print "Removing broken symlink %s" % symlink_path
+        else:
+            print "%s is already linked correctly" % symlink_path
+            return
     elif os.path.exists(symlink_path):
         print "Removing %s" % symlink_path
         os.remove(symlink_path)
 
+    print "Symlinking: %s to %s" % (symlink_path, abs_path)
     os.symlink(abs_path, symlink_path)
 
 
