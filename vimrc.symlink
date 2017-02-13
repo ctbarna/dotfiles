@@ -22,7 +22,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/syntastic'
