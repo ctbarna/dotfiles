@@ -8,6 +8,7 @@ brew install python
 brew install node
 
 # Dev tools
+brew install wget
 brew install fish
 brew install ack
 brew install git
@@ -20,3 +21,4 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install macvim
 brew cask install iterm2
+brew cask install slack
