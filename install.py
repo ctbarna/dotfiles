@@ -35,6 +35,10 @@ for file in os.listdir(cwd):
 
 # Fish config
 config_dir = os.path.expanduser("~/.config")
+if not os.path.exists(config_dir):
+    print "Creating %s" % config_dir
+    os.makedirs(config_dir)
+
 fish_config = os.path.join(cwd, "fish")
 symlink_path = os.path.join(config_dir, "fish")
 
