@@ -10,7 +10,7 @@ Installation
 ```
 > git clone git@github.com:ctbarna/dotfiles.git
 > cd dotfiles
-> python install.py
+> ./setup.sh
 ```
 
 This will symlink all the files in the repo that contain the suffix `.symlink`.
