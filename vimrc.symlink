@@ -31,6 +31,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'craigemery/vim-autotag'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 filetype plugin indent on    " required
