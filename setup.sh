@@ -26,3 +26,7 @@ echo " ... Done"
 echo -n "Installing ipython"
 pip install ipython 1>/dev/null
 echo " ... Done"
+
+echo -n "Installing virtualenvwrapper"
+pip install virtualenvwrapper 1>/dev/null
+echo " ... Done"
