@@ -9,7 +9,7 @@ echo " ... Done"
 
 # Need some things for MacVim to work correctly.
 echo -n "Downloading Inconsolata-dz for Powerline"
-wget -q -P ~/Library/Fonts https://github.com/powerline/fonts/raw/master/InconsolataDz/Inconsolata-dz%20for%20Powerline.otf
+wget -nc -q -P ~/Library/Fonts https://github.com/powerline/fonts/raw/master/InconsolataDz/Inconsolata-dz%20for%20Powerline.otf
 echo " ... Done"
 
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
